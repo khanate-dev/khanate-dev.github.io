@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
+
 body {
 	--bg-color-dark: darkslateblue;
 	--fg-color-dark: cornsilk;
@@ -12,7 +14,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: 'Inter', sans-serif;
 }
 
 * {
@@ -98,7 +100,7 @@ h1 {
 	margin: 0;
 	text-transform: uppercase;
 	font-weight: 900;
-	line-height: 1;
+	line-height: 100%;
 	text-align: center;
 }
 
@@ -114,10 +116,15 @@ h1 {
 	text-align: center;
 }
 
-@media (prefers-color-scheme: dark) {
+@media only screen and (prefers-color-scheme: dark) {
 	main {
 		--bg-color: var(--bg-color-dark);
 		--fg-color: var(--fg-color-dark);
+	}
+
+	#toggle-theme:checked ~ main {
+		--bg-color: var(--bg-color-light);
+		--fg-color: var(--fg-color-light);
 	}
 
 	#toggle-theme + label > div {

@@ -21,6 +21,26 @@ body {
 	transition: color 0.2s linear, background-color 0.2s linear, transform 0.2s linear, opacity 0.2s linear;
 }
 
+#github-link {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.1s linear;
+}
+
+#github-link:hover {
+	transform: scale(1.1);
+}
+
+#github-link > svg > path {
+	fill: var(--fg-color);
+}
+
 #toggle-theme {
 	display: none;
 }
